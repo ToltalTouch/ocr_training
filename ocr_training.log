@@ -1,0 +1,40 @@
+2025-10-17 16:28:31,239 - ERROR - Erro ao processar a tabela descricao_complementar: no such table: descricao_complementar
+2025-10-17 16:28:57,437 - ERROR - Erro ao processar a tabela db_patrimonio.sqlite: unknown database db_patrimonio
+2025-10-17 16:31:18,571 - INFO - Using database: c:\python\ocr_training\db_patrimonio.sqlite
+2025-10-17 16:31:37,166 - ERROR - Erro ao processar a tabela db_patrimonio.sqlite: unknown database db_patrimonio
+2025-10-17 16:32:17,972 - INFO - Using database: c:\python\ocr_training\db_patrimonio.sqlite
+2025-10-17 16:32:38,083 - INFO - Encontrados 3207 itens na tabela db_patrimonio.
+2025-10-17 16:32:38,085 - INFO - Processados 0 itens.
+2025-10-17 16:32:38,104 - INFO - Processados 100 itens.
+2025-10-17 16:32:38,137 - INFO - Processados 200 itens.
+2025-10-17 16:32:38,173 - INFO - Processados 300 itens.
+2025-10-17 16:32:38,208 - INFO - Processados 400 itens.
+2025-10-17 16:32:38,240 - INFO - Processados 500 itens.
+2025-10-17 16:32:38,280 - INFO - Processados 600 itens.
+2025-10-17 16:32:38,329 - INFO - Processados 700 itens.
+2025-10-17 16:32:38,375 - INFO - Processados 800 itens.
+2025-10-17 16:32:38,420 - INFO - Processados 900 itens.
+2025-10-17 16:32:38,469 - INFO - Processados 1000 itens.
+2025-10-17 16:32:38,523 - INFO - Processados 1100 itens.
+2025-10-17 16:32:38,580 - INFO - Processados 1200 itens.
+2025-10-17 16:32:38,647 - INFO - Processados 1300 itens.
+2025-10-17 16:32:38,719 - INFO - Processados 1400 itens.
+2025-10-17 16:32:38,776 - INFO - Processados 1500 itens.
+2025-10-17 16:32:38,832 - INFO - Processados 1600 itens.
+2025-10-17 16:32:38,890 - INFO - Processados 1700 itens.
+2025-10-17 16:32:38,951 - INFO - Processados 1800 itens.
+2025-10-17 16:32:39,013 - INFO - Processados 1900 itens.
+2025-10-17 16:32:39,072 - INFO - Processados 2000 itens.
+2025-10-17 16:32:39,136 - INFO - Processados 2100 itens.
+2025-10-17 16:32:39,207 - INFO - Processados 2200 itens.
+2025-10-17 16:32:39,265 - INFO - Processados 2300 itens.
+2025-10-17 16:32:39,324 - INFO - Processados 2400 itens.
+2025-10-17 16:32:39,392 - INFO - Processados 2500 itens.
+2025-10-17 16:32:39,447 - INFO - Processados 2600 itens.
+2025-10-17 16:32:39,501 - INFO - Processados 2700 itens.
+2025-10-17 16:32:39,561 - INFO - Processados 2800 itens.
+2025-10-17 16:32:39,622 - INFO - Processados 2900 itens.
+2025-10-17 16:32:39,672 - INFO - Processados 3000 itens.
+2025-10-17 16:32:39,732 - INFO - Processados 3100 itens.
+2025-10-17 16:32:39,785 - INFO - Processados 3200 itens.
+2025-10-17 16:32:39,834 - INFO - Total de variações geradas e armazenadas: 55576.
