@@ -1,6 +1,6 @@
 import sqlite3
 import logging
-from typing import List, Set
+from typing import Set
 from unidecode import unidecode
 import os
 import sys
@@ -8,8 +8,6 @@ import glob
 
 class DatabaseManager:
     def __init__(self):
-        self.setup_logging()
-        
         if getattr(sys, 'frozen', False):
             self.dir_path = os.path.dirname(sys.executable)
         else:
@@ -17,17 +15,13 @@ class DatabaseManager:
         
         db_path = glob.glob(os.path.join(self.dir_path, '*.sqlite'))
         self.db_path = db_path[0] if db_path else None
-
-    def setup_logging(self):
-        log_dir = os.path.join(self.dir_path,'variations_generator.log')
-        if not os.path.exists(log_dir):
-            os.makedirs(log_dir, 'variations_generator.log')
-            
+        
+        self.log_dir = os.path.join(self.dir_path, 'ocr_training.log')
         logging.basicConfig(
             level=logging.DEBUG,
             format='%(asctime)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler(log_dir),
+                logging.FileHandler(self.log_dir),
                 logging.StreamHandler()
             ]
         )
@@ -57,8 +51,8 @@ class DatabaseManager:
                 variations.add(new_text.lower())
                 
         return variations
-    
-    def process_databaser(self, table_name: str, descriptuion_column: str):
+
+    def process_database(self, table_name: str, description_column: str):
         try:
             conn = sqlite3.connect(self.db_path)
             cur = conn.cursor()
@@ -70,7 +64,7 @@ class DatabaseManager:
                             variation TEXT,
                             UNIQUE(original_text, variation)
                         )""")
-            cur.execute(f"SELECT DISTINCT {descriptuion_column} FROM {table_name}")
+            cur.execute(f"SELECT DISTINCT {description_column} FROM {table_name}")
             
             items = cur.fetchall()
             
@@ -110,6 +104,7 @@ class DatabaseManager:
 if __name__ == "__main__":
     db_manager = DatabaseManager()
     
+    logging.info(f"Using database: {db_manager.db_path}")
     table_name = input("Enter the table name to process: ")
     description_column = input("Enter the description column name: ")
-    db_manager.process_databaser(table_name=table_name, description_column=description_column)
+    db_manager.process_database(table_name=table_name, description_column=description_column)
