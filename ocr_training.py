@@ -12,7 +12,10 @@ class DatabaseManager:
             self.dir_path = os.path.dirname(sys.executable)
         else:
             self.dir_path = os.path.dirname(os.path.abspath(__file__))
-        
+
+        self.conn = sqlite3.connect(self.db_path)
+        self.cursor = self.conn.cursor()
+
         db_path = glob.glob(os.path.join(self.dir_path, '*.sqlite'))
         self.db_path = db_path[0] if db_path else None
         
@@ -101,10 +104,70 @@ class DatabaseManager:
         finally:
             conn.close()
             
+    def get_tables(self, conn):
+        self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        return [table[0] for table in self.cursor.fetchall()]
+
+    def get_columns(self, conn, table_name):
+        self.cursor.execute(f"PRAGMA table_info({table_name})")
+        return [column[1] for column in self.cursor.fetchall()]
+
 if __name__ == "__main__":
     db_manager = DatabaseManager()
     
-    logging.info(f"Using database: {db_manager.db_path}")
-    table_name = input("Enter the table name to process: ")
-    description_column = input("Enter the description column name: ")
-    db_manager.process_database(table_name=table_name, description_column=description_column)
+    sqlite_files = glob.glob(os.path.join(db_manager.dir_path, '*.sqlite'))
+    
+    if not sqlite_files:
+        logging.error("Nenhum arquivo .sqlite encontrado no diretório.")
+        sys.exit(1)
+        
+    logging.info("\nArquivos database encontrados:")
+    for idx, file in enumerate(sqlite_files):
+        logging.info(f"{idx + 1}. {os.path.basename(file)}")
+        
+    while True:
+        try:
+            choice = int(input("\nSelecione o numero do aquivo para processar: "))
+            if 1<= choice <= len(sqlite_files):
+                db = sqlite_files[choice - 1]
+                break
+            logging.info(f"Escolha inválida. Por favor, selecione um número entre 1 e {len(sqlite_files)}.")
+        except ValueError:
+            logging.info("Entrada inválida. Por favor, insira um número válido.")
+            
+    conn = sqlite3.connect(db_manager.db_path)
+    tables = db_manager.get_tables(conn)
+    logging.info("\nTabelas encontradas no banco de dados: ")
+    for idx, table in enumerate(tables):
+        logging.info(f"{idx + 1}. {table}")
+        
+    while True:
+        try:
+            choice = int(input("\nSelecione o numero da tabela para processar: "))
+            if 1 <= choice <= len(tables):
+                db_table = tables[choice - 1]
+                break
+            logging.info(f"Escolha inválida. Por favor, selecione um número entre 1 e {len(tables)}.")
+        except ValueError:
+            logging.info("Entrada inválida. Por favor, insira um número válido.")
+    
+    columns = db_manager.get_columns(conn, db_table)
+    logging.info("\nColunas encontradas na tabela selecionada: ")
+    for idx, column in enumerate(columns):
+        logging.info(f"{idx + 1}. {column}")
+    
+    while True:
+        try:
+            choice = int(input("\nSelecione o numero da coluna de descrição para processar: "))
+            if 1 <= choice <= len(columns):
+                description_column = columns[choice - 1]
+                break
+            logging.info(f"Escolha inválida. Por favor, selecione um número entre 1 e {len(columns)}.")
+        except ValueError:
+            logging.info("Entrada inválida. Por favor, insira um número válido.")
+    conn.close()
+
+    logging.info(f"\nIniciando o processamento do arquivo '{os.path.basename(db)}', tabela '{db_table}', coluna '{description_column}'.\n")
+    logging.info(f"Tabela: {db_table}, Coluna: {description_column}\n")
+    
+    db_manager.process_database(table_name=db_table, description_column=description_column)
