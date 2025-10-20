@@ -38,3 +38,124 @@
 2025-10-17 16:32:39,732 - INFO - Processados 3100 itens.
 2025-10-17 16:32:39,785 - INFO - Processados 3200 itens.
 2025-10-17 16:32:39,834 - INFO - Total de variações geradas e armazenadas: 55576.
+2025-10-20 09:16:48,268 - INFO - Using database: c:\python\ocr_training\db_patrimonio.sqlite
+2025-10-20 09:17:21,668 - ERROR - Erro ao processar a tabela db_patrimonio.sqlite: unknown database db_patrimonio
+2025-10-20 09:43:11,663 - INFO - 
+Arquivos database encontrados:
+2025-10-20 09:43:11,669 - INFO - 1. db_patrimonio.sqlite
+2025-10-20 09:43:18,168 - INFO - 
+Tabelas encontradas no banco de dados: 
+2025-10-20 09:43:18,168 - INFO - 1. db_patrimonio
+2025-10-20 09:43:18,168 - INFO - 2. descricao_complementar_variations
+2025-10-20 09:43:18,169 - INFO - 3. sqlite_sequence
+2025-10-20 09:43:18,169 - INFO - 4. db_patrimonio_variations
+2025-10-20 09:43:25,535 - INFO - 
+Colunas encontradas na tabela selecionada: 
+2025-10-20 09:43:25,535 - INFO - 1. orgao
+2025-10-20 09:43:25,536 - INFO - 2. unidade
+2025-10-20 09:43:25,536 - INFO - 3. gestao
+2025-10-20 09:43:25,536 - INFO - 4. uorg
+2025-10-20 09:43:25,536 - INFO - 5. conta_contabil
+2025-10-20 09:43:25,536 - INFO - 6. numero_patrimonial_antigo
+2025-10-20 09:43:25,537 - INFO - 7. numero_patrimonial
+2025-10-20 09:43:25,537 - INFO - 8. data_tombamento
+2025-10-20 09:43:25,537 - INFO - 9. codigo_material
+2025-10-20 09:43:25,537 - INFO - 10. nome_material
+2025-10-20 09:43:25,537 - INFO - 11. descricao_complementar
+2025-10-20 09:43:25,538 - INFO - 12. marca
+2025-10-20 09:43:25,538 - INFO - 13. modelo
+2025-10-20 09:43:25,538 - INFO - 14. serie
+2025-10-20 09:43:25,538 - INFO - 15. fabricante
+2025-10-20 09:43:25,538 - INFO - 16. processo
+2025-10-20 09:43:25,539 - INFO - 17. codigo_terceiros
+2025-10-20 09:43:25,539 - INFO - 18. valor_inicial_bem
+2025-10-20 09:43:25,539 - INFO - 19. valor_bem
+2025-10-20 09:43:25,539 - INFO - 20. valor_depreciado
+2025-10-20 09:43:25,539 - INFO - 21. valor_liquido
+2025-10-20 09:43:25,539 - INFO - 22. valor_doacao_venda
+2025-10-20 09:43:25,540 - INFO - 23. codigo_tipo_bem
+2025-10-20 09:43:25,540 - INFO - 24. nome_tipo_bem
+2025-10-20 09:43:25,540 - INFO - 25. codigo_situacao
+2025-10-20 09:43:25,540 - INFO - 26. nome_situacao
+2025-10-20 09:43:25,541 - INFO - 27. codigo_destinacao
+2025-10-20 09:43:25,541 - INFO - 28. nome_destinacao
+2025-10-20 09:43:25,541 - INFO - 29. cpf_responsavel
+2025-10-20 09:43:25,541 - INFO - 30. nome_responsavel
+2025-10-20 09:43:25,541 - INFO - 31. cpf_responsavel_uorg
+2025-10-20 09:43:25,542 - INFO - 32. nome_responsavel_uorg
+2025-10-20 09:43:25,542 - INFO - 33. updated_at
+2025-10-20 09:43:33,015 - INFO - 
+Iniciando o processamento do arquivo 'db_patrimonio.sqlite', tabela 'db_patrimonio', coluna 'nome_material'.
+
+2025-10-20 09:43:33,015 - INFO - Tabela: db_patrimonio, Coluna: nome_material
+
+2025-10-20 09:44:06,755 - INFO - 
+Arquivos database encontrados:
+2025-10-20 09:44:06,755 - INFO - 1. db_patrimonio.sqlite
+2025-10-20 09:44:11,945 - INFO - 
+Tabelas encontradas no banco de dados: 
+2025-10-20 09:44:11,945 - INFO - 1. db_patrimonio
+2025-10-20 09:44:11,945 - INFO - 2. descricao_complementar_variations
+2025-10-20 09:44:11,945 - INFO - 3. sqlite_sequence
+2025-10-20 09:44:11,946 - INFO - 4. db_patrimonio_variations
+2025-10-20 09:44:14,728 - INFO - 
+Colunas encontradas na tabela selecionada: 
+2025-10-20 09:44:14,728 - INFO - 1. orgao
+2025-10-20 09:44:14,728 - INFO - 2. unidade
+2025-10-20 09:44:14,729 - INFO - 3. gestao
+2025-10-20 09:44:14,729 - INFO - 4. uorg
+2025-10-20 09:44:14,729 - INFO - 5. conta_contabil
+2025-10-20 09:44:14,729 - INFO - 6. numero_patrimonial_antigo
+2025-10-20 09:44:14,729 - INFO - 7. numero_patrimonial
+2025-10-20 09:44:14,730 - INFO - 8. data_tombamento
+2025-10-20 09:44:14,730 - INFO - 9. codigo_material
+2025-10-20 09:44:14,730 - INFO - 10. nome_material
+2025-10-20 09:44:14,731 - INFO - 11. descricao_complementar
+2025-10-20 09:44:14,731 - INFO - 12. marca
+2025-10-20 09:44:14,731 - INFO - 13. modelo
+2025-10-20 09:44:14,731 - INFO - 14. serie
+2025-10-20 09:44:14,732 - INFO - 15. fabricante
+2025-10-20 09:44:14,732 - INFO - 16. processo
+2025-10-20 09:44:14,732 - INFO - 17. codigo_terceiros
+2025-10-20 09:44:14,732 - INFO - 18. valor_inicial_bem
+2025-10-20 09:44:14,733 - INFO - 19. valor_bem
+2025-10-20 09:44:14,733 - INFO - 20. valor_depreciado
+2025-10-20 09:44:14,733 - INFO - 21. valor_liquido
+2025-10-20 09:44:14,733 - INFO - 22. valor_doacao_venda
+2025-10-20 09:44:14,733 - INFO - 23. codigo_tipo_bem
+2025-10-20 09:44:14,734 - INFO - 24. nome_tipo_bem
+2025-10-20 09:44:14,734 - INFO - 25. codigo_situacao
+2025-10-20 09:44:14,734 - INFO - 26. nome_situacao
+2025-10-20 09:44:14,734 - INFO - 27. codigo_destinacao
+2025-10-20 09:44:14,734 - INFO - 28. nome_destinacao
+2025-10-20 09:44:14,735 - INFO - 29. cpf_responsavel
+2025-10-20 09:44:14,735 - INFO - 30. nome_responsavel
+2025-10-20 09:44:14,736 - INFO - 31. cpf_responsavel_uorg
+2025-10-20 09:44:14,737 - INFO - 32. nome_responsavel_uorg
+2025-10-20 09:44:14,737 - INFO - 33. updated_at
+2025-10-20 09:44:25,336 - INFO - 
+Iniciando o processamento do arquivo 'db_patrimonio.sqlite', tabela 'db_patrimonio', coluna 'nome_material'.
+
+2025-10-20 09:44:25,336 - INFO - Tabela: db_patrimonio, Coluna: nome_material
+
+2025-10-20 09:44:25,389 - INFO - Encontrados 1854 itens na tabela db_patrimonio.
+2025-10-20 09:44:25,394 - INFO - Processados 0 itens.
+2025-10-20 09:44:25,494 - INFO - Processados 100 itens.
+2025-10-20 09:44:25,579 - INFO - Processados 200 itens.
+2025-10-20 09:44:25,649 - INFO - Processados 300 itens.
+2025-10-20 09:44:25,723 - INFO - Processados 400 itens.
+2025-10-20 09:44:25,773 - INFO - Processados 500 itens.
+2025-10-20 09:44:25,824 - INFO - Processados 600 itens.
+2025-10-20 09:44:25,916 - INFO - Processados 700 itens.
+2025-10-20 09:44:26,015 - INFO - Processados 800 itens.
+2025-10-20 09:44:26,116 - INFO - Processados 900 itens.
+2025-10-20 09:44:26,218 - INFO - Processados 1000 itens.
+2025-10-20 09:44:26,308 - INFO - Processados 1100 itens.
+2025-10-20 09:44:26,407 - INFO - Processados 1200 itens.
+2025-10-20 09:44:26,505 - INFO - Processados 1300 itens.
+2025-10-20 09:44:26,605 - INFO - Processados 1400 itens.
+2025-10-20 09:44:26,689 - INFO - Processados 1500 itens.
+2025-10-20 09:44:26,785 - INFO - Processados 1600 itens.
+2025-10-20 09:44:26,895 - INFO - Processados 1700 itens.
+2025-10-20 09:44:26,999 - INFO - Processados 1800 itens.
+2025-10-20 09:44:27,807 - INFO - Total de variações geradas e armazenadas: 86771.
